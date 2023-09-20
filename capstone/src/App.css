@@ -1,20 +1,27 @@
 #root {
+  display: block;
   /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .Links li {
-  display: inline-block;
+  /* float: left; */
+  display: block;
   font-size: 20px;
   padding: 20px;
 }
 
-.Items {
+#Projecttitle {
+  text-align: center;
+}
+
+#Items {
+  text-align: center;
   display: inline-block;
-  width: 200px;
-  height: 400px;
+  /* width: 200px; */
+  /* height: 400px; */
   padding: 10px;
   color: #646cff;
 }
@@ -23,27 +30,17 @@
   overflow: auto;
 }
 
-#Login {
-  text-align: right;
+#Project title {
+  border-block-width: 250px;
 }
 
-#Logout {
-  text-align: right;
-}
-
-#SignUp {
-  text-align: right;
+#NavButtons {
+  float: right;
 }
 
 #ItemPic {
   max-width: 200px;
   height: 200px;
-}
-#root {
-  /* max-width: 1280px; */
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
 }
 
 .Links li {
@@ -52,31 +49,6 @@
   padding: 20px;
 }
 
-.Items {
-  display: inline-block;
-  width: 200px;
-  height: 400px;
-  padding: 10px;
-  color: #646cff;
-}
-
 .description {
   overflow: auto;
-}
-
-#Login {
-  text-align: right;
-}
-
-#Logout {
-  text-align: right;
-}
-
-#SignUp {
-  text-align: right;
-}
-
-#ItemPic {
-  max-width: 200px;
-  height: 200px;
 }
