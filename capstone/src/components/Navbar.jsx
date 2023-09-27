@@ -1,57 +1,39 @@
-import { useEffect, useState } from "react";
+import { Route, Routes, Link } from "react-router-dom";
 import Login from "./LoginButton";
 import Logout from "./LogoutButton";
 import SignUp from "./SignUp";
+import Cart from "./Cart";
 
-const NavBar = () => {
-  // useEffect(() => {
-  //   try {
-  //     const logStatus = async () => {
-  //       const response = await fetch("");
-  //       const lstatus = await response.json();
-  //       console.log(lstatus);
-  //       setstatus(lstatus);
-  //     };
-  //     logStatus();
-  //   } catch (error) {
-  //     console.error("Error retreving log status", error);
-  //   }
-  // }, []);
-
-  // const [status, setstatus] = useState([]);
-
+export default function NavBar() {
   return (
-    <>
+    <div className="Navbar">
       <header>
-        <h1 id="Projecttitle">Capstone</h1>
-        <div id="NavButtons">
-          <Login />
-          <Logout />
-          <SignUp />
-        </div>
-        <ul className="Links">
-          <li>
-            <a href="" id="Home">
-              {" "}
-              Home{" "}
-            </a>
-          </li>
-          <li>
-            <a href="" id="Departments">
-              {" "}
-              Departments{" "}
-            </a>
-          </li>
-          <li>
-            <a href="" id="Cart">
-              {" "}
-              Cart{" "}
-            </a>
-          </li>
-        </ul>
+        <h1 className="title">Capstone</h1>
+        <nav className="NavLinks">
+          <Link to="/">Home</Link>
+          <br />
+          <Link to="/departments">Departments</Link>
+          <br />
+          <Link to="/cart">Cart</Link>
+          <div className="NavButtons">
+            <Link to="/login">
+              <Login />
+            </Link>
+            <Link to="/signUp">
+              <SignUp />
+            </Link>
+            <Link to="/logout">
+              <Logout />
+            </Link>
+          </div>
+        </nav>
+        <Routes>
+          <Route path="/Cart" element={<Cart />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signUp" element={<SignUp />} />
+          <Route path="logout" element={<Logout />} />
+        </Routes>
       </header>
-    </>
+    </div>
   );
-};
-
-export default NavBar;
+}
